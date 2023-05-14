@@ -130,8 +130,6 @@ class FinancesView {
 
             Alert errorAlert = new Alert(Alert.AlertType.ERROR);
 
-            errorAlert.setTitle("Error añadiendo la transacción");
-
             errorAlert.setHeaderText(null);
 
             errorAlert.setContentText("El monto debe ser un número valido.");
@@ -150,7 +148,7 @@ class FinancesView {
 
         Transaction newTransaction = financesController.addTransaction(amount, description,type,date);
 
-        transactions.add(0,newTransaction); // Add to the beginning of the list
+        transactions.add(0,newTransaction); // Añade al inicio de la lista.
 
         updateBalance();
 
